@@ -1,0 +1,32 @@
+<div class="container" *ngIf="data$ | async as data">
+  <button class="container__button" (click)="goBack()">&#60;</button>
+  <div class="container__card">
+    <div class="card__container-img">
+      <img
+        src="{{ data.snippet.thumbnails.high.url }}"
+        alt="{{ data.snippet.title }}"
+        class="container-img__img"
+      />
+    </div>
+    <div
+      class="card__container-info"
+      [ngClass]="searchItemComponent.getClassOf(data)"
+    >
+      <div class="container-info__header">
+        <div class="container-info__header__name">{{ data.snippet.title }}</div>
+        <div class="container-info__header__date">
+          {{ data.snippet.publishedAt | date : "fullDate" }}
+        </div>
+      </div>
+      <div class="container-info__main">
+        <div class="container-info__main__name">Description:</div>
+        <div class="container-info__main__text">
+          {{ data.snippet.description }}
+        </div>
+      </div>
+      <div class="container-info__header">
+        <app-statistics [card]="data"></app-statistics>
+      </div>
+    </div>
+  </div>
+</div>

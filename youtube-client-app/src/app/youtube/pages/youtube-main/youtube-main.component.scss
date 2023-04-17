@@ -1,0 +1,32 @@
+.container-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.createCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.createCard__add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0;
+  background-color: rgb(47, 128, 237);
+  font-size: 35px;
+  cursor: pointer;
+  transition: 0.15s linear;
+}
+
+.createCard__add:active {
+  background-color: rgb(25, 69, 127);
+}

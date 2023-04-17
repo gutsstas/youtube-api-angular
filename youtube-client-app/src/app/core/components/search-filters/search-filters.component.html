@@ -1,0 +1,41 @@
+<div class="filters">
+  <div>Sorting by:</div>
+  <div class="filters__link" (click)="clickDate()">
+    Date
+    <span
+      *ngIf="searchServices.filter.date"
+      [ngClass]="
+        searchServices.filter.up ? 'flex-container' : 'flex-container revert'
+      "
+      class="flex-container"
+    >
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Icon"
+        fontIcon="straight"
+      ></mat-icon
+    ></span>
+  </div>
+  <div class="filters__link" (click)="clickCountViews()">
+    Count of views
+    <span
+      *ngIf="searchServices.filter.count"
+      [ngClass]="
+        searchServices.filter.up ? 'flex-container' : 'flex-container revert'
+      "
+    >
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Icon"
+        fontIcon="straight"
+      ></mat-icon
+    ></span>
+  </div>
+  <div>Word or sentence</div>
+  <input
+    class="filters__input"
+    type="text"
+    [(ngModel)]="term"
+    (ngModelChange)="getValueSearch()"
+  />
+</div>

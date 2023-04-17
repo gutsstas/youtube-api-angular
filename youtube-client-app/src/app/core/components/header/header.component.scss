@@ -1,0 +1,94 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 200px;
+  width: 100vw;
+  background-color: rgb(207 207 210 / 65%);
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__youtube {
+  font-size: 50px;
+  color: rgba(47, 128, 237, 1);
+}
+
+.header__form-input {
+  width: 50%;
+  margin: 22px 20px 0 20px;
+  height: auto;
+}
+
+.button__search {
+  background-color: rgba(47, 128, 237, 1) !important;
+}
+
+.header__slider {
+  font-size: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+  color: rgba(47, 128, 237, 1);
+}
+
+.header__slider:active {
+  color: rgb(12, 79, 166);
+}
+
+.header__auth {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+
+  .header__auth__name {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .header__auth__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header__auth__icon {
+    width: auto;
+    height: auto;
+    font-size: 40px;
+    color: rgba(47, 128, 237, 1);
+    cursor: pointer;
+  }
+
+  .header__auth__icon:active {
+    color: rgb(12, 79, 166);
+  }
+
+  .header__auth__btn {
+    width: auto;
+    padding: 5px;
+    height: 25px;
+    border: 0;
+    background-color: rgb(212, 29, 29);
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .header__auth__btn:active {
+    background-color: rgb(151, 21, 21);
+  }
+
+  .btn-login {
+    background-color: rgba(47, 128, 237, 1);
+  }
+
+  .btn-login:active {
+    background-color: rgb(12, 79, 166);
+  }
+}

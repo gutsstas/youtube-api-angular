@@ -1,0 +1,59 @@
+.container-create {
+  width: 433px;
+  height: 493px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #e0e0e0;
+  margin-top: 100px;
+}
+
+.container-create-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-create__header {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: Roboto;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.container-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.error-password {
+  white-space: break-spaces;
+}
+
+.container-create__link {
+  margin-right: 10px;
+  color: #2f80ed;
+}
+
+.container-create__submit {
+  height: 30px;
+  width: 124px;
+  background: #2f80ed;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  border: 0;
+  cursor: pointer;
+}
+
+.container-create__submit:active {
+  background: #1b4c8c;
+}

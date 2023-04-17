@@ -1,0 +1,125 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+
+.container__button {
+  width: 32px;
+  height: 32px;
+  background-color: rgba(47, 128, 237, 1);
+  border: none;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px 0px 0px 5px;
+  text-decoration: none;
+  font-size: 32px;
+}
+.container__button:active {
+  background-color: rgb(30, 80, 144);
+}
+
+.container__card {
+  max-width: 1200px;
+  min-width: 700px;
+  max-height: 461px;
+  min-height: 361px;
+  display: flex;
+}
+
+.card__container-img {
+  width: 729px;
+  max-height: 100%;
+}
+
+.container-img__img {
+  height: 100%;
+  width: 100%;
+}
+
+.card__container-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 436px;
+  background: #e5e5e5;
+  box-shadow: 5px 5px 20px rgba(51, 51, 51, 0.25);
+  border-radius: 0px 5px 5px 0px;
+  box-sizing: border-box;
+  border-bottom: 6px solid;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 20px;
+}
+
+.red {
+  border-color: rgb(199, 2, 2);
+}
+
+.yellow {
+  border-color: rgb(234, 241, 2);
+}
+
+.green {
+  border-color: rgb(10, 160, 2);
+}
+
+.blue {
+  border-color: rgb(1, 7, 160);
+}
+
+.container-info__header {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-info__header__name {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.container-info__header__date {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: right;
+  color: #828282;
+}
+
+.container-info__main {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-info__main__name {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  margin: 25px 0 7px 0;
+}
+
+.container-info__main__text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #828282;
+  height: 200px;
+  overflow: auto;
+  margin-bottom: 45px;
+}

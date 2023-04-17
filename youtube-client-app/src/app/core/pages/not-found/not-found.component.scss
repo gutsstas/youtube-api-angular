@@ -1,0 +1,16 @@
+.container-error {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+}
+
+.error__img {
+  width: 100px;
+}
+
+.error__text {
+  margin-left: 20px;
+  font-size: 30px;
+}

@@ -1,0 +1,59 @@
+<div class="header">
+  <div class="header-container" [formGroup]="searchForm">
+    <fa-icon [icon]="youTube" class="header__youtube"></fa-icon>
+    <mat-form-field class="header__form-input">
+      <mat-label>What are you want to find out?</mat-label>
+
+      <input
+        matInput
+        type="text"
+        formControlName="search"
+        class="header__form-input__input"
+      />
+
+      <button
+        *ngIf="searchControl.value"
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="(clearSearchControl)"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <fa-icon
+      [icon]="slider"
+      class="header__slider"
+      (click)="searchServices.filterVisible = !searchServices.filterVisible"
+    ></fa-icon>
+    <div class="header__auth">
+      <div class="header__auth__name">
+        {{ userService.getUserName() ? userService.getUserName() : "Name" }}
+      </div>
+      <a class="header__auth__link">
+        <mat-icon class="header__auth__icon">account_circle</mat-icon>
+      </a>
+
+      <button
+        class="header__auth__btn"
+        *ngIf="userService.currentStatus | async"
+        (click)="clickLogOut()"
+      >
+        LogOut
+      </button>
+
+      <button
+        class="header__auth__btn btn-login"
+        *ngIf="(userService.currentStatus | async) === false"
+      >
+        LogIn
+      </button>
+    </div>
+  </div>
+  <div>
+    <app-search-filters
+      *ngIf="searchServices.filterVisible"
+    ></app-search-filters>
+  </div>
+</div>

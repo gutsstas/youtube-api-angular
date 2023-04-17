@@ -1,0 +1,23 @@
+<div class="card bottom-border" [ngClass]="getClassOf(card)">
+  <img
+    [src]="card.snippet.thumbnails.default.url"
+    [alt]="card.snippet.title"
+    class="card__img"
+  />
+
+  <app-statistics [card]="card"></app-statistics>
+
+  <h3 class="card__title">{{ card.snippet.title }}</h3>
+  <a
+    *ngIf="card.snippet.linkVideo === undefined"
+    routerLink="/video/{{ card.id }}"
+    class="card__button"
+    >More</a
+  >
+  <a
+    *ngIf="card.snippet.linkVideo !== undefined"
+    href="{{ card.snippet.linkVideo }}"
+    class="card__button button-user"
+    >Look Video</a
+  >
+</div>

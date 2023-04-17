@@ -1,0 +1,53 @@
+.container-registration {
+  height: 392px;
+  width: 344px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #e0e0e0;
+  margin-top: 100px;
+}
+
+.container-registration-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-registration__header {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.container-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.container-registration__link {
+  margin-right: 10px;
+  color: #2f80ed;
+}
+
+.container-registration__submit {
+  height: 30px;
+  width: 124px;
+  background: #2f80ed;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  border: 0;
+  cursor: pointer;
+}
+
+.container-registration__submit:active {
+  background: #1b4c8c;
+}

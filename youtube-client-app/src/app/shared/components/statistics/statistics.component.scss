@@ -1,0 +1,18 @@
+.card__statistics {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  * {
+    height: 100%;
+  }
+}
+
+.card__statistics__span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  margin-left: 4px;
+}

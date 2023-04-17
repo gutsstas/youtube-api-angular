@@ -1,0 +1,39 @@
+.filters {
+  display: flex;
+  justify-content: center;
+
+  > div {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.filters__link {
+  color: #0080ef;
+  text-decoration: underline;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.filters__link:active {
+  color: #0060b4;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  margin-right: -10px;
+}
+
+.flex-container.revert {
+  transform: rotate(180deg);
+}
+
+.filters__input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}

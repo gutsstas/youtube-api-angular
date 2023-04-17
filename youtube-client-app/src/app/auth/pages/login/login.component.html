@@ -1,0 +1,55 @@
+<form class="container-login" [formGroup]="logInForm" (ngSubmit)="onSubmit()">
+  <label class="container-login__header">Login</label>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Your Email</mat-label>
+    <input
+      matInput
+      placeholder="pat@example.com"
+      formControlName="email"
+      type="email"
+      required
+    />
+    <mat-error *ngIf="logInForm.controls['email'].errors">
+      {{
+        logInForm.controls["email"].value
+          ? "The login email is invalid"
+          : "Please enter a login email"
+      }}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Your password</mat-label>
+    <input
+      matInput
+      [type]="hide ? 'password' : 'text'"
+      formControlName="password"
+      required
+    />
+
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+    >
+      <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+    </button>
+    <mat-error
+      *ngIf="logInForm.controls['password'].errors"
+      class="error-password"
+    >
+      {{
+        logInForm.controls["password"].value
+          ? "Password should have minimum 8 characters, at least: \n 1 uppercase letter, \n 1 lowercase letter, \n 1 number, \n 1 special character, e.g., ! @ # ? ]"
+          : "Please enter a password"
+      }}
+    </mat-error>
+  </mat-form-field>
+  <div class="container-btn">
+    <a routerLink="/registration" class="container-login__link">Registration</a>
+    <button type="submit" class="container-login__submit">Login</button>
+  </div>
+</form>

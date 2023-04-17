@@ -1,0 +1,20 @@
+<div class="container-items">
+  <div class="container-items" *ngIf="data$ | async as data">
+    <app-search-item
+      *ngFor="
+        let item of data
+          | filterSearch : searchServices.valueInput
+          | filterByDate : searchServices.filter.date : searchServices.filter.up
+          | filterByCountViews
+            : searchServices.filter.count
+            : searchServices.filter.up
+      "
+      [card]="item"
+    >
+    </app-search-item>
+  </div>
+
+  <div class="createCard">
+    <button class="createCard__add" (click)="pathToCreate()">+</button>
+  </div>
+</div>
